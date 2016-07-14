@@ -9,3 +9,6 @@ Generic Event Delivery Using HTTP Push
 3. [Message Encryption for Web Push](https://datatracker.ietf.org/doc/draft-ietf-webpush-encryption/)
 4. [Encrypted Content-Encoding for HTTP](https://datatracker.ietf.org/doc/draft-ietf-httpbis-encryption-encoding/)
 
+## W3C Push API (Client side)
+
+1. [Push API](https://w3c.github.io/push-api/)
