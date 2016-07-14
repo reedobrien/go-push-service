@@ -5,11 +5,11 @@ package wps
 
 // UserAgen is mispelled to test linting. This is done so gitlab CI can be
 // configured.
-type UserAgent struct {
-	ID string
+type UserAgent struct { 
+ID string
 }
 
 // NewUserAgent is a function we can test. See above.
 func NewUserAgent(id string) UserAgent {
-	return UserAgent{ID: id}
+    return UserAgent{ID:    id}
 }
