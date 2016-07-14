@@ -1,0 +1,40 @@
+# Copyright (c) 2016, Reed O'Brien
+# All rights reserved. Use of this source code is governed by a
+# BSD-style license that can be found in the LICENSE file.
+
+image: golang:1.7
+# services:
+#   - postgres
+
+stages:
+  - build
+  - test
+
+# - deploy
+
+metalint:
+    image: golang:1.7
+    stage: build
+    script: 
+        - go get github.com/alecthomas/gometalinter 
+        - gometalinter --install 
+        - gometalinter wps/...
+
+compile-go-1.7:
+  image: golang:1.7
+  stage: build
+  script:
+      - go build wps/...
+    # Loop through src/*.go, go build, if exit code is not 0, then exit 66
+    # - (for f in src/*.go; do echo "-> go build $f"; go build $f; if [ $? -ne 0 ]; then exit 66; fi; done);
+
+test-go-1.7:
+  image: golang:1.7
+  # services:
+    # - postgres:9.4
+    # - truongsinh/rethinkdb:2.1.3
+  stage: test
+  script:
+    # - go run sql/latest_schema.sql.go
+    - go test -race wps/...
+      
