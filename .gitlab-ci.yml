@@ -16,6 +16,9 @@ metalint:
     image: golang:1.7
     stage: build
     script: 
+        - echo $GOPATH
+        - echo $GOROOT
+        - ls -laht
         - go get github.com/alecthomas/gometalinter 
         - gometalinter --install 
         - gometalinter wps/...
