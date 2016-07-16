@@ -16,6 +16,21 @@ func TestUserAgent(t *testing.T) {
 	equals(t, got.ID, want)
 }
 
+func TestAddOne(t *testing.T) {
+	table := []struct {
+		in, want int
+	}{
+		{0, 1},
+		{1, 2},
+		{2, 3},
+		{3, 4},
+	}
+	for _, test := range table {
+		got := wps.AddOne(test.in)
+		equals(t, got, test.want)
+	}
+}
+
 // equals fails the test if got is not equal to want.
 func equals(tb testing.TB, got, want interface{}) {
 	if !reflect.DeepEqual(got, want) {
