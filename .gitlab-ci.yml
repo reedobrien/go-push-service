@@ -46,4 +46,6 @@ test-go-1.7:
     - mkdir -p /go/src/gitlab.com/fffd
     - ln -s /builds/fffd/wps /go/src/gitlab.com/fffd/wps
     - go test -race ./...
+    - go test -coverprofile=coverage.txt -covermode=atomic
+    - bash <(curl -s https://codecov.io/bash)
       
