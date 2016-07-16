@@ -16,6 +16,7 @@ metalint:
     image: golang:1.7
     stage: build
     script: 
+        - pwd
         - ls -laht $GOPATH
         - go get github.com/alecthomas/gometalinter 
         - gometalinter --install 
@@ -37,6 +38,7 @@ test-go-1.7:
   stage: test
   script:
     # - go run sql/latest_schema.sql.go
+    - mkdir -p gitlab.com/fffd
     - ln -s . gitlab.com/fffd/wps
     - go test -race ./...
       
