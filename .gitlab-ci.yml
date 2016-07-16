@@ -16,9 +16,9 @@ metalint:
     image: golang:1.7
     stage: build
     script: 
-        - (unformatted=$(goimports -l -e .); if [ -n "$unformatted" ]; then echo >&2 Go files must be formatted with goimports.; for filename in $unformatted; do echo >&2 "goimports -w $PWD/$filename"; done; EXIT=1; fi )       
         - go get github.com/alecthomas/gometalinter 
         - gometalinter --install 
+        - (unformatted=$(goimports -l -e .); if [ -n "$unformatted" ]; then echo >&2 Go files must be formatted with goimports.; for filename in $unformatted; do echo >&2 "goimports -w $PWD/$filename"; done; EXIT=1; fi )       
         - gometalinter 
 
 compile-go-1.7:
