@@ -2,6 +2,10 @@
 
 Generic Event Delivery Using HTTP Push
 
+## Status 
+
+[Gitlab Build Badge](http://example.gitlab.com/namespace/project/badges/branch/build.svg)
+
 ## Specs on IETF Tracker
 
 1. [Generic Event Delivery Using HTTP Push](https://datatracker.ietf.org/doc/draft-ietf-webpush-protocol/)
