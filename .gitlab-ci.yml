@@ -21,13 +21,13 @@ metalint:
         - ls -laht
         - go get github.com/alecthomas/gometalinter 
         - gometalinter --install 
-        - gometalinter wps/...
+        - gometalinter 
 
 compile-go-1.7:
   image: golang:1.7
   stage: build
   script:
-      - go build wps/...
+      - go build ./...
     # Loop through src/*.go, go build, if exit code is not 0, then exit 66
     # - (for f in src/*.go; do echo "-> go build $f"; go build $f; if [ $? -ne 0 ]; then exit 66; fi; done);
 
@@ -39,5 +39,5 @@ test-go-1.7:
   stage: test
   script:
     # - go run sql/latest_schema.sql.go
-    - go test -race wps/...
+    - go test -race ./...
       
