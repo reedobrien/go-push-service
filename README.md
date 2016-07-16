@@ -4,7 +4,8 @@ Generic Event Delivery Using HTTP Push
 
 ## Status 
 
-[Gitlab Build Badge](http://example.gitlab.com/namespace/project/badges/branch/build.svg)
+[![Gitlab Build Badge](http://example.gitlab.com/namespace/project/badges/branch/build.svg)](http://example.gitlab.com/namespace/project/badges/branch/build.svg)
+[![Go Report Card](https://goreportcard.com/badge/gitlab.com/fffd/wps)](https://goreportcard.com/report/gitlab.com/fffd/wps)
 
 ## Specs on IETF Tracker
 
