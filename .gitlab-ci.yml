@@ -38,7 +38,7 @@ test-go-1.7:
   stage: test
   script:
     # - go run sql/latest_schema.sql.go
-    - mkdir -p gitlab.com/fffd
-    - ln -s . gitlab.com/fffd/wps
+    - mkdir -p /go/src/gitlab.com/fffd
+    - ln -s /builds/fffd/wps /go/src/gitlab.com/fffd/wps
     - go test -race ./...
       
