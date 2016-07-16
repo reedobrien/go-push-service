@@ -9,8 +9,3 @@ type UserAgent struct{ ID string }
 
 // NewUserAgent is a function we can test. See above.
 func NewUserAgent(id string) UserAgent { return UserAgent{id} }
-
-// AddOne is for testing codecov.io
-func AddOne(i int) int {
-	return i + 1
-}
