@@ -1,4 +1,4 @@
-// wps is a web push service implementation. It is intended to implement the specs currently emerging in the following.
+// Package wps is a web push service implementation. It is intended to implement the specs currently emerging in the following.
 //
 // Specs on IETF Tracker
 //
