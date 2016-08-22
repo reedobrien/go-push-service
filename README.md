@@ -6,7 +6,7 @@ Generic Event Delivery Using HTTP Push
 
 [![build status](https://gitlab.com/fffd/wps/badges/master/build.svg)](https://gitlab.com/fffd/wps/commits/master)
 [![Go Report Card](https://goreportcard.com/badge/gitlab.com/fffd/wps)](https://goreportcard.com/report/gitlab.com/fffd/wps)
-[![Coverage]](http://example.gitlab.com/fffd/wps/badges/master/coverage.svg)
+[![Coverage]](https://gitlab.com/fffd/wps/badges/master/coverage.svg)
 [![codebeat badge](https://codebeat.co/badges/431d8870-e36b-488e-b32d-15b8cefe0441)](https://codebeat.co/projects/gitlab-com-fffd-wps)    
 [![codecov master](https://codecov.io/gl/fffd/wps/branch/master/graph/badge.svg)](https://codecov.io/gl/fffd/wps) master    
 [![codecov develop](https://codecov.io/gl/fffd/wps/branch/master/graph/badge.svg)](https://codecov.io/gl/fffd/wps) develop    
