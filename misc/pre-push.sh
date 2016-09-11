@@ -36,6 +36,9 @@ echo -e "\nrunning errcheck..."
 errcheck $PACKAGE
 check_exit
 
+echo -e "\nrunning metalinter..."
+gometalinter --deadline=120s
+check_exit
 echo -e "\nrunning golint..."
 havelint=$(golint ./...)
 if [ -n "$havelint" ]; then
