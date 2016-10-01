@@ -1,4 +1,4 @@
-package wps_test
+package useragent_test
 
 import (
 	"fmt"
@@ -7,12 +7,12 @@ import (
 	"runtime"
 	"testing"
 
-	"gitlab.com/fffd/wps"
+	"gitlab.com/fffd/wps/useragent"
 )
 
 func TestUserAgent(t *testing.T) {
 	want := "testid"
-	got := wps.NewUserAgent(want)
+	got := useragent.NewUserAgent(want)
 	equals(t, got.ID, want)
 }
 
