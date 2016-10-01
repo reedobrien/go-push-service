@@ -23,7 +23,7 @@ metalint:
         - (unformatted=$(goimports -l -e .); if [ -n "$unformatted" ]; then echo >&2 Go files must be formatted with goimports.; for filename in $unformatted; do echo >&2 "failed goimports    $PWD/$filename"; done; exit 1; fi )       
         - go vet gitlab.com/fffd/wps
         - go tool vet -shadowstrict .
-        - gometalinter ./...
+        - gometalinter ./... --deadline=120s
 
 compile-go-1.7:
   image: golang:1.7
@@ -44,8 +44,7 @@ test-go-1.7:
   script:
     # - go run sql/latest_schema.sql.go
     - mkdir -p /go/src/gitlab.com/fffd
-    - ln -s /builds/fffd/wps /go/src/gitlab.com/fffd/wps
+    - cp -r /builds/fffd/wps /go/src/gitlab.com/fffd/
     - go test -race ./...
-    - go test -coverprofile=coverage.txt -covermode=atomic gitlab.com/fffd/wps
+    - ./misc/recursiveCoverage.sh
     - bash <(curl -s https://codecov.io/bash)
-      

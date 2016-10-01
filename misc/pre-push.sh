@@ -63,8 +63,9 @@ fi
 echo -e "\nrunning go test -race..."
 go test -race -coverprofile=coverage.out .
 check_exit
-go tool cover -func=coverage.out
-rm coverage.out
+echo 'mode: atomic' >| coverage.txt && touch coverage.tmp && go list ./... | xargs -n1 -I{} sh -c 'go test -covermode=atomic -coverprofile=coverage.tmp {} && tail -n +2 coverage.tmp >> coverage.txt' && rm -i -f coverage.tmp && go tool cover -func=coverage.txt
+# go tool cover -func=coverage.out
+# rm coverage.out
 
 echo -e "\n"
 
